@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloworld
+  # set your namespace
+  namespace: <namespace>
+  labels:
+    app: helloworld
+spec:
+  containers:
+    - name: helloworld
+      image: gcr.io/spot-ar/helloworld:1.0.0
+      ports:
+        - name: http
+          containerPort: 8080
+      readinessProbe:
+        httpGet:
+          path: /actuator/health
+          port: 8079
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 30
+      livenessProbe:
+        httpGet:
+          path: /actuator/health
+          port: 8079
+        initialDelaySeconds: 5
+        periodSeconds: 10
+#      env:
+#        - name: JAVA_PARAMS
+#          value: "--server.servlet.context-path=/viktorgt"

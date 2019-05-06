@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helloworld
+  # set your namespace
+  namespace: <namespace>
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: workshop.spotar.io
+      http:
+        paths:
+          - backend:
+              serviceName: helloworld-service
+              servicePort: 8080
+            # set your context path
+            path: <namespace>
