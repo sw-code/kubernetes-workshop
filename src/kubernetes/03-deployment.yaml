@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: helloworld
-          image: gcr.io/spot-ar/helloworld:1.0.0
+          image: gcr.io/workshop-bielefeld/helloworld:1.0.0
           imagePullPolicy: Always
           ports:
             - name: http
