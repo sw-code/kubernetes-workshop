@@ -98,7 +98,7 @@ Application will be available on localhost:12345
 
 `kubectl set image -n <namespace> deployment/<deployment-name> <container-name>=<image>:<tag>`
 
-`kubectl set image -n <namespace> deployment/helloworld helloworld=gcr.io/spot-ar/helloworld:6.0.0`
+`kubectl set image -n <namespace> deployment/helloworld helloworld=gcr.io/workshop-bielefeld/helloworld:1.0.1`
 
 # ConfigMaps
 ## Dry run of creating config map from literal
