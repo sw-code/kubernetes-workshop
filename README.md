@@ -113,16 +113,16 @@ Application will be available on localhost:12345
 
 # Access Dashboard
 
-Get Token
-
-`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
-
 Start proxy
 `kubectl proxy`
 
 Open `localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:https/proxy/` in browser
 
-Select Token for authetication and paste the token
+Get Token
+
+`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
+
+Copy&paste token for authetication
 
 
 
