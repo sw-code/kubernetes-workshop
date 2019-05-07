@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: helloworld-config
+  namespace: viktorgt
+data:
+  # Configuration values can be set as key-value properties
+  java-params: --server.servlet.context-path=/viktorgt
+
+  # Or set as complete file contents
+  example.yaml: |
+    param1: 42
+    otherParam:
+      param2: 43
