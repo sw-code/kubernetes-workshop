@@ -1,3 +1,6 @@
+# One Drive share
+https://1drv.ms/f/s!Au_K0QJKvVQPgZ0hIm0g3qZJUa3Xng
+
 # Install kubectl
 
 ## Windows
@@ -98,7 +101,7 @@ Application will be available on localhost:12345
 
 `kubectl set image -n <namespace> deployment/<deployment-name> <container-name>=<image>:<tag>`
 
-`kubectl set image -n <namespace> deployment/helloworld helloworld=gcr.io/spot-ar/helloworld:6.0.0`
+`kubectl set image -n <namespace> deployment/helloworld helloworld=gcr.io/workshop-bielefeld/helloworld:1.0.1`
 
 # ConfigMaps
 ## Dry run of creating config map from literal
@@ -113,16 +116,16 @@ Application will be available on localhost:12345
 
 # Access Dashboard
 
-Get Token
-
-`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
-
 Start proxy
 `kubectl proxy`
 
 Open `localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:https/proxy/` in browser
 
-Select Token for authetication and paste the token
+Get Token
+
+`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`
+
+Copy&paste token for authetication
 
 
 
