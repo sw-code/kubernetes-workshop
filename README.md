@@ -1,6 +1,3 @@
-# One Drive share
-https://1drv.ms/u/s!Au_K0QJKvVQPgZ0iOlHDijaMiCbfAw?download=1
-
 # Install kubectl
 
 ## Windows
